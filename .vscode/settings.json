@@ -1,0 +1,10 @@
+{
+    "files.exclude": {
+        ".vscode": true,
+        ".idea": true,
+        "bin": true,
+        "obj": true,
+
+        "LynsQOL.cs": true
+    }
+}

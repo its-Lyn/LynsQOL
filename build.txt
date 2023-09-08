@@ -1,0 +1,3 @@
+displayName = Lyn's Quality of life
+author = Lyn
+version = 0.1
