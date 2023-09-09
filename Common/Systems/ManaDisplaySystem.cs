@@ -10,32 +10,32 @@ namespace LynsQOL.Common.Systems;
 
 public class ManaDisplaySystem : ModSystem
 {
-    internal ManaDisplay mDisplay;
-    private UserInterface userInterface;
+    internal ManaDisplay MDisplay;
+    private UserInterface _userInterface;
 
     public override void Load()
     {
-        mDisplay = new ManaDisplay();
-        mDisplay.Activate();
+        MDisplay = new ManaDisplay();
+        MDisplay.Activate();
 
-        userInterface = new UserInterface();
-        userInterface.SetState(mDisplay);
+        _userInterface = new UserInterface();
+        _userInterface.SetState(MDisplay);
     }
 
     public override void ModifyInterfaceLayers(List<GameInterfaceLayer> layers)
     {
         if (LynQOLConfig.Instance.ManaIndicatorToggle)
         {
-            int UiTextIdx = layers.FindIndex(l => l.Name.Equals("Vanilla: Resource Bars"));
-            if (UiTextIdx != -1)
+            int uiTextIdx = layers.FindIndex(l => l.Name == "Vanilla: Resource Bars");
+            if (uiTextIdx != -1)
             {
-                layers.Insert(UiTextIdx, new LegacyGameInterfaceLayer(
+                layers.Insert(uiTextIdx, new LegacyGameInterfaceLayer(
                     "LynsQOL: ManaLayer",
                     delegate
                     {
-                        userInterface.Draw(Main.spriteBatch, new GameTime());
+                        _userInterface.Draw(Main.spriteBatch, new GameTime());
                         return true;
-                    },
+                    }, 
                     InterfaceScaleType.UI
                 ));
             }
@@ -44,6 +44,6 @@ public class ManaDisplaySystem : ModSystem
 
     public override void UpdateUI(GameTime gameTime)
     {
-        userInterface?.Update(gameTime);
+        _userInterface?.Update(gameTime);
     }
 }

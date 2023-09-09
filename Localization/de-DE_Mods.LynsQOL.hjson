@@ -1,0 +1,16 @@
+# This file will automatically update with entries for new content after a build and reload
+
+Items: {
+}
+
+Configs: {
+	LynQOLConfig: {
+		DisplayName: Mod-Konfiguration
+		Headers.UIElements: UI Elemente
+
+		ManaIndicatorToggle: {
+			Label: Aktiviere Mana-Anzeige
+			Tooltip: Zeigt wie viel Mana man hat über den Spieler an
+		}
+	}
+}
