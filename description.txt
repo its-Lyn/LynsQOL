@@ -1,1 +1,9 @@
-This mod adds a few recipes for some trivial items I can't be asked to grind for.
+A simple, unintrusive QOL Mod.
+
+Adds a few recipes for existing items to make progression easier.
+
+- Vile/Vicious mushroom recipes
+- Leather using vertebraes recipe
+- Tattered cloth recipe
+
+And a simple Mana UI that can be turned on and off in the mod's settings.
